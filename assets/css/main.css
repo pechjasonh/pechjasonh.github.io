@@ -713,7 +713,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 #hero-area {
-  color: #fff;
+  color: #333;
   overflow: hidden;
   position: relative;
 }
@@ -724,7 +724,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   height: 100%;
   top: 0px;
   left: 0px;
-  background: #0c0808;
+  background: #ffffff;
   opacity: 0.8;
 }
 
@@ -737,7 +737,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 #hero-area .contents .head-title {
-  color: #fff;
+  color: #333;
   font-size: 80px;
   letter-spacing: 10px;
   text-transform: uppercase;
@@ -746,7 +746,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 
 #hero-area .contents p {
   font-size: 30px;
-  color: #fff;
+  color: #333;
   font-weight: 400;
   line-height: 30px;
   margin-bottom: 25px;
