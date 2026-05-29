@@ -1135,4 +1135,209 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
   color: #00b4d9;
 }
 
+/* Side Navigation */
+.side-nav {
+  position: fixed;
+  top: 50%;
+  left: 24px;
+  transform: translateY(-50%);
+  z-index: 9999;
+}
 
+.side-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.side-nav li {
+  margin: 14px 0;
+}
+
+.side-nav-link {
+  width: 52px;
+  height: 52px;
+  border-radius: 50px;
+  background: #f2f2f2;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0 17px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.side-nav-link i {
+  font-size: 18px;
+  min-width: 18px;
+  text-align: center;
+}
+
+.side-nav-link span {
+  opacity: 0;
+  visibility: hidden;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.side-nav-link:hover {
+  width: 145px;
+  background: #00b4d9;
+  color: #fff;
+}
+
+.side-nav-link:hover span {
+  opacity: 1;
+  visibility: visible;
+}
+
+.side-nav-link:hover i {
+  color: #fff;
+}
+
+/* Keep active item same as normal state */
+.side-nav-link.active {
+  width: 52px;
+  background: #f2f2f2;
+  color: #555;
+}
+
+.side-nav-link.active span {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.side-nav-link.active i {
+  color: #555;
+}
+
+/* When active item is hovered */
+.side-nav-link.active:hover {
+  width: 145px;
+  background: #00b4d9;
+  color: #fff;
+}
+
+.side-nav-link.active:hover span {
+  opacity: 1;
+  visibility: visible;
+}
+
+.side-nav-link.active:hover i {
+  color: #fff;
+}
+
+.side-nav-link:hover span,
+.side-nav-link.active span {
+  opacity: 1;
+  visibility: visible;
+}
+
+.side-nav-link:hover i,
+.side-nav-link.active i {
+  color: #fff;
+}
+
+/* Hide old top nav spacing effect if needed */
+.navbar,
+.scrolling-navbar,
+.indigo {
+  display: none !important;
+}
+
+/* Mobile version */
+@media screen and (max-width: 768px) {
+  .side-nav {
+    top: auto;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 8px 10px;
+    border-radius: 50px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+  }
+
+  .side-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .side-nav li {
+    margin: 0;
+  }
+
+  .side-nav-link {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    justify-content: center;
+    box-shadow: none;
+  }
+
+  .side-nav-link:hover,
+  .side-nav-link.active {
+    width: 42px;
+  }
+
+  .side-nav-link span {
+    display: none;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+.navbar,
+.scrolling-navbar,
+.indigo {
+  display: none !important;
+}
+.side-nav-link.active {
+  width: 52px !important;
+  background: #f2f2f2 !important;
+  color: #555 !important;
+}
+
+.side-nav-link.active i {
+  color: #555 !important;
+}
+
+.side-nav-link.active span {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Only turn white when hovering */
+.side-nav-link.active:hover {
+  width: 145px !important;
+  background: #00b4d9 !important;
+  color: #fff !important;
+}
+
+.side-nav-link.active:hover i {
+  color: #fff !important;
+}
+
+.side-nav-link.active:hover span {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+/* Side nav normal icon color */
+.side-nav-link i,
+.side-nav-link.active i {
+  color: #00b4d9 !important;
+}
+
+/* Keep icon white only on hover */
+.side-nav-link:hover i,
+.side-nav-link.active:hover i {
+  color: #fff !important;
+}
